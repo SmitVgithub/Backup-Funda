@@ -23,10 +23,10 @@ def create_backup(project_dir, backup_dir):
        return None
 
 # Function to upload backup to Google Drive
-def upload_to_google_drive(backup_path, drive_folder):
+def upload_to_google_drive(backup_path, Taskbackup):
    try:
        # Replace the following line with the appropriate CLI tool and command
-       subprocess.run(['gdrive', 'upload', '--parent', drive_folder, backup_path], check=True)
+       subprocess.run(['gdrive', 'upload', '--parent', Taskbackup, backup_path], check=True)
        logging.info(f"Backup uploaded to Google Drive: {backup_path}")
    except subprocess.CalledProcessError as e:
        logging.error(f"Error uploading backup to Google Drive: {e}")
