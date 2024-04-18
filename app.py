@@ -50,7 +50,7 @@ def process_resume_text(text):
     Process extracted text to extract relevant information.
     For demonstration purposes, let's assume we extract a name and email.
     """
-    name = "John Doe"
+    name = "Smit"
     email = "john.doe@example.com"
 
     # Store the extracted data in a dictionary
