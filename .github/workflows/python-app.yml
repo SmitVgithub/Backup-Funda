@@ -21,10 +21,10 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install gdrive
 
       - name: Run backup script
-        run: python backup_script.py --project-dir /path/to/project --backup-dir /path/to/backup --drive-folder GOOGLE_DRIVE_FOLDER_ID
+        run: python backup_script.py --project-dir main-branch --backup-dir backups/ --drive-folder GOOGLE_DRIVE_FOLDER_ID
         env:
           GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           GOOGLE_DRIVE_ACCESS_TOKEN: ${{ secrets.GOOGLE_DRIVE_ACCESS_TOKEN }}
