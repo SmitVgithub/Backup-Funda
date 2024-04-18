@@ -1,8 +1,9 @@
 name: Automated Backup
 
-on:
-  schedule:
-    - cron: '0 0 * * *'  # Run the backup script every day at midnight
+  push:
+    branches:
+      - main  # Specify the branch you want to trigger the workflow on
+
 
 jobs:
   backup:
