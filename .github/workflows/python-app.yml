@@ -24,7 +24,7 @@ jobs:
         run: pip install gdrive
 
       - name: Run backup script
-        run: python backup_script.py --project-dir main-branch --backup-dir backups/ --drive-folder GOOGLE_DRIVE_FOLDER_ID
+        run: python3 backup_script.py --project-dir main-branch --backup-dir backups/ --drive-folder GOOGLE_DRIVE_FOLDER_ID
         env:
           GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
           GOOGLE_DRIVE_ACCESS_TOKEN: ${{ secrets.GOOGLE_DRIVE_ACCESS_TOKEN }}
