@@ -1,5 +1,6 @@
 name: Automated Backup
 
+on:
   push:
     branches:
       - main  # Specify the branch you want to trigger the workflow on
